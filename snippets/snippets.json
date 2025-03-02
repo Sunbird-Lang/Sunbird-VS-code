@@ -1,0 +1,6 @@
+{
+  "Function definition": {
+    "prefix": "func",
+    "body": ["var ${1:name} = func(${2}) {", "\t${3}", "}"]
+  }
+}
