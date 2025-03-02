@@ -2,5 +2,9 @@
   "Function definition": {
     "prefix": "func",
     "body": ["var ${1:name} = func(${2}) {", "\t${3}", "}"]
+  },
+  "Variable declaration": {
+    "prefix": "var",
+    "body": ["var ${1:name} = ${2}"]
   }
 }
