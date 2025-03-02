@@ -59,7 +59,7 @@
       "patterns": [
         {
           "name": "keyword.control.sunbird",
-          "match": "\\b(if|else|return|func)\\b"
+          "match": "\\b(if|else|return|func|true|false)\\b"
         }
       ]
     },
