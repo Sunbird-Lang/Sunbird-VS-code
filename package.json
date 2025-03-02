@@ -7,7 +7,8 @@
     "vscode": "^1.97.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "contributes": {
     "languages": [
@@ -29,6 +30,12 @@
         "language": "sunbird",
         "scopeName": "source.sb",
         "path": "./syntaxes/sunbird.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sunbird",
+        "path": "./snippets/snippets.json"
       }
     ]
   }
