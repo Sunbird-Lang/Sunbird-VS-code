@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Sunbird",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "name": "variable.language.sunbird",
+      "match": "\\b(var)\\b"
+    },
+    {
+      "name": "variable.other.local.sunbird",
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+    },
+    {
+      "name": "constant.numeric.sunbird",
+      "match": "\\b\\d+\\b"
+    },
+    {
+      "name": "string.quoted.double.sunbird",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": []
+    },
+    {
+      "name": "string.quoted.single.sunbird",
+      "begin": "'",
+      "end": "'",
+      "patterns": []
+    },
+    {
+      "name": "comment.line.double-slash.sunbird",
+      "match": "//.*$"
+    },
+    {
+      "name": "comment.block.sunbird",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    {
+      "name": "keyword.operator.sunbird",
+      "match": "\\+|<|>|="
+    },
+    {
+      "name": "punctuation.definition.group.sunbird",
+      "match": "[{}()]"
+    },
+    {
+      "name": "punctuation.terminator.sunbird",
+      "match": ";"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.sunbird",
+          "match": "\\b(if|else|return|func)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.sunbird",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": []
+    }
+  },
+  "scopeName": "source.sb"
+}

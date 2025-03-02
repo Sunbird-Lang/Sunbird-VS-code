@@ -1,0 +1,35 @@
+{
+  "name": "sunbird",
+  "displayName": "Sunbird",
+  "description": "Support for the Sunbird language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "sunbird",
+        "aliases": [
+          "Sunbird",
+          "sunbird"
+        ],
+        "extensions": [
+          ".sb",
+          ".sbd"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sunbird",
+        "scopeName": "source.sb",
+        "path": "./syntaxes/sunbird.tmLanguage.json"
+      }
+    ]
+  }
+}
