@@ -5,7 +5,7 @@
   },
   "Variable declaration": {
     "prefix": "var",
-    "body": ["var ${1:name} = ${2}"]
+    "body": ["var ${1:name} = ${2};"]
   },
   "If-Else Statement": {
     "prefix": "if",
