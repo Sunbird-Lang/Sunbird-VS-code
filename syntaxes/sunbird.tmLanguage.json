@@ -16,65 +16,83 @@
       "match": "\\b(var)\\b"
     },
     {
+      "name": "constant.language.sunbird",
+      "match": "\\b(true|false|null)\\b"
+    },
+    {
       "name": "variable.other.local.sunbird",
       "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
     },
     {
-      "name": "constant.numeric.sunbird",
-      "match": "\\b\\d+\\b"
+      "name": "constant.numeric.decimal.sunbird",
+      "match": "\\b\\d*\\.?\\d+\\b"
     },
     {
-      "name": "constant.language.sunbird",
-      "match": "\\b(null|true|false)\\b"
+      "name": "keyword.operator.arithmetic.sunbird", 
+      "match": "\\+|-|\\*|/|%|=|\\+=|-=|\\*=|/=|%="
     },
     {
-      "name": "string.quoted.double.sunbird",
-      "begin": "\"",
-      "end": "\"",
-      "patterns": []
+      "name": "keyword.operator.comparison.sunbird",
+      "match": "==|!=|<|>|<=|>="
     },
     {
-      "name": "string.quoted.single.sunbird",
-      "begin": "'",
-      "end": "'",
-      "patterns": []
-    },
-    {
-      "name": "comment.line.double-slash.sunbird",
-      "match": "//.*$"
-    },
-    {
-      "name": "comment.block.sunbird",
-      "begin": "/\\*",
-      "end": "\\*/"
-    },
-    {
-      "name": "keyword.operator.sunbird",
-      "match": "\\+|<|>|="
+      "name": "keyword.operator.logical.sunbird",
+      "match": "&&|\\|\\||!"
     },
     {
       "name": "punctuation.definition.group.sunbird",
-      "match": "[{}()]"
+      "match": "[{}()\\[\\]]"
     },
     {
-      "name": "punctuation.terminator.sunbird",
+      "name": "punctuation.terminator.statement.sunbird",
       "match": ";"
     }
   ],
   "repository": {
     "keywords": {
+      "patterns": [{
+        "name": "keyword.control.sunbird",
+        "match": "\\b(if|else|return|func|for|while|break|continue)\\b"
+      }]
+    },
+    "strings": {
       "patterns": [
         {
-          "name": "keyword.control.sunbird",
-          "match": "\\b(if|else|return|func)\\b"
+          "name": "string.quoted.double.sunbird",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [{
+            "name": "constant.character.escape.sunbird",
+            "match": "\\\\."
+          }]
+        },
+        {
+          "name": "string.quoted.single.sunbird",
+          "begin": "'",
+          "end": "'",
+          "patterns": [{
+            "name": "constant.character.escape.sunbird",
+            "match": "\\\\."
+          }]
         }
       ]
     },
-    "strings": {
-      "name": "string.quoted.double.sunbird",
-      "begin": "\"",
-      "end": "\"",
-      "patterns": []
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.sunbird",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.sunbird",
+          "begin": "/\\*",
+          "end": "\\*/",
+          "patterns": [{
+            "name": "comment.block.documentation.sunbird",
+            "match": "\\*\\s.*"
+          }]
+        }
+      ]
     }
   },
   "scopeName": "source.sb"
