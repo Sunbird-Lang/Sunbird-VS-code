@@ -10,7 +10,7 @@
     },
     {
       "include": "#comments"
-    }
+    },
     {
       "name": "variable.language.sunbird",
       "match": "\\b(var)\\b"
