@@ -24,6 +24,10 @@
       "match": "\\b\\d+\\b"
     },
     {
+      "name": "constant.language.sunbird",
+      "match": "\\b(null|true|false)\\b"
+    },
+    {
       "name": "string.quoted.double.sunbird",
       "begin": "\"",
       "end": "\"",
@@ -62,7 +66,7 @@
       "patterns": [
         {
           "name": "keyword.control.sunbird",
-          "match": "\\b(if|else|return|func|true|false)\\b"
+          "match": "\\b(if|else|return|func)\\b"
         }
       ]
     },
